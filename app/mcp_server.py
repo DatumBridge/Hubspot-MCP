@@ -13,6 +13,7 @@ from starlette.responses import JSONResponse
 from starlette.routing import Mount, Route
 
 from app.services.hubspot_service import HubSpotError, HubSpotService
+from app.capability_bind import bind_declared_capabilities
 
 logger = logging.getLogger(__name__)
 
@@ -293,6 +294,9 @@ Outputs: success
     except json.JSONDecodeError:
         return {"success": False, "error": {"error_code": "VALIDATION_ERROR", "error_message": "properties_json must be JSON", "retryable": False}}
 
+
+
+bind_declared_capabilities(mcp)
 
 _base_app = mcp.http_app()
 
