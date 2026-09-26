@@ -64,7 +64,11 @@ def hubspot_search_contacts(
     credentials_json: Optional[str] = _CREDS_JSON,
     limit: int = Field(default=20),
 ) -> dict:
-    """Search HubSpot contacts."""
+    """Search HubSpot contacts.
+
+        Capabilities: hubspot.hubspot_search_contacts
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -80,7 +84,11 @@ def hubspot_get_contact(
     credentials_path: Optional[str] = _CREDS_PATH,
     credentials_json: Optional[str] = _CREDS_JSON,
 ) -> dict:
-    """Get a HubSpot contact by id."""
+    """Get a HubSpot contact by id.
+
+        Capabilities: hubspot.hubspot_get_contact
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -97,7 +105,11 @@ def hubspot_create_contact(
     confirm: bool = Field(default=False),
     dry_run: bool = Field(default=False),
 ) -> dict:
-    """Create a HubSpot contact. Requires confirm=true."""
+    """Create a HubSpot contact. Requires confirm=true.
+
+        Capabilities: hubspot.hubspot_create_contact
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -123,7 +135,11 @@ def hubspot_update_contact(
     confirm: bool = Field(default=False),
     dry_run: bool = Field(default=False),
 ) -> dict:
-    """Update a HubSpot contact. Requires confirm=true."""
+    """Update a HubSpot contact. Requires confirm=true.
+
+        Capabilities: hubspot.hubspot_update_contact
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -147,7 +163,11 @@ def hubspot_search_companies(
     credentials_json: Optional[str] = _CREDS_JSON,
     limit: int = Field(default=20),
 ) -> dict:
-    """Search HubSpot companies."""
+    """Search HubSpot companies.
+
+        Capabilities: hubspot.hubspot_search_companies
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -163,7 +183,11 @@ def hubspot_get_company(
     credentials_path: Optional[str] = _CREDS_PATH,
     credentials_json: Optional[str] = _CREDS_JSON,
 ) -> dict:
-    """Get a HubSpot company by id."""
+    """Get a HubSpot company by id.
+
+        Capabilities: hubspot.hubspot_get_company
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -180,7 +204,11 @@ def hubspot_create_company(
     confirm: bool = Field(default=False),
     dry_run: bool = Field(default=False),
 ) -> dict:
-    """Create a HubSpot company. Requires confirm=true."""
+    """Create a HubSpot company. Requires confirm=true.
+
+        Capabilities: hubspot.hubspot_create_company
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -204,7 +232,11 @@ def hubspot_search_deals(
     credentials_json: Optional[str] = _CREDS_JSON,
     limit: int = Field(default=20),
 ) -> dict:
-    """Search HubSpot deals."""
+    """Search HubSpot deals.
+
+        Capabilities: hubspot.hubspot_search_deals
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -220,7 +252,11 @@ def hubspot_get_deal(
     credentials_path: Optional[str] = _CREDS_PATH,
     credentials_json: Optional[str] = _CREDS_JSON,
 ) -> dict:
-    """Get a HubSpot deal by id."""
+    """Get a HubSpot deal by id.
+
+        Capabilities: hubspot.hubspot_get_deal
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
@@ -237,7 +273,11 @@ def hubspot_create_deal(
     confirm: bool = Field(default=False),
     dry_run: bool = Field(default=False),
 ) -> dict:
-    """Create a HubSpot deal. Requires confirm=true."""
+    """Create a HubSpot deal. Requires confirm=true.
+
+        Capabilities: hubspot.hubspot_create_deal
+Outputs: success
+        """
     try:
         if not credentials_path and not credentials_json:
             return {"success": False, "error": _creds_required()}
